@@ -5,7 +5,8 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-base-200">
       <h2>This is home page</h2>
       <div className="btn btn-ghost">
-        Go to Matches
+         <a href="/matches">Go to Matches</a>
+      
       </div>
     </div>
   );
