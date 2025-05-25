@@ -50,9 +50,9 @@ export default function page() {
           CHAT WITH PEOPLE WHO MATCHED WITH YOU
         </h2>
     </div>
-  <div className="flex flex-row justify-center overflow-hidden mt-4  ">
+  <div className="grid grid-cols-2 justify-center overflow-hidden mt-4 p-1 ">
     {/* Left panel */}
-    <div className="w-1/3 border-r border-gray-800 p-2">
+    <div className=" border-r border-gray-800 p-1">
       <ChatList 
         users={mockUsers}
         activeUserId={activeUserId}
@@ -61,7 +61,7 @@ export default function page() {
     </div>
 
     {/* Right panel */}
-    <div className="w-2/3 p-2">
+    <div className=" p-2">
       <ChatView 
         user={activeUser}
         messages={activeMessages}

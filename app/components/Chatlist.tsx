@@ -21,7 +21,7 @@ const ChatList = ({ users, activeUserId, onSelectUser }: ChatListProps) => {
     <div className="w-full h-full flex flex-col ">
       
       
-      <div className="flex-1 overflow-y-auto scrollbar-hidden">
+      <div className="flex-1 overflow-y-auto p-2 ">
         {users.map((user) => (
           <div 
             key={user.id}
@@ -45,10 +45,10 @@ const ChatList = ({ users, activeUserId, onSelectUser }: ChatListProps) => {
             
             <div className="flex-1">
               <div className="flex justify-between items-center">
-                <h3 className="font-medium text-white">{user.name}</h3>
+                <h3 className="font-bold text-sm text-white">{user.name}</h3>
                 <span className="text-xs text-gray-400">{user.timestamp}</span>
               </div>
-              <p className="text-sm text-gray-400 truncate">{user.lastMessage}</p>
+              <p className="text-xs text-gray-400 truncate">{user.lastMessage}</p>
             </div>
           </div>
         ))}
