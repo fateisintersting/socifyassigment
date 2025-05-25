@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Smile } from "lucide-react";
+import { GoSmiley } from "react-icons/go";
 
 interface Message {
   id: string;
@@ -79,7 +79,7 @@ const ChatView = ({ user, messages, onSendMessage }: ChatViewProps) => {
       {/* Message Input */}
       <form onSubmit={handleSendMessage} className="p-4 border-t border-gray-800">
         <div className="flex items-center bg-gray-800/50 rounded-full px-4 py-2">
-          <Smile size={20} className="text-gray-400 mr-3" />
+          <GoSmiley size={20} className="text-gray-400 mr-3" />
           <input
             type="text"
             value={newMessage}

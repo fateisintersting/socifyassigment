@@ -1,6 +1,8 @@
 
 import React from 'react';
-import { Heart, MessageSquare, User } from "lucide-react";
+
+import { TbHeartSearch ,TbHeartCheck ,TbHearts  } from "react-icons/tb";
+
 import Link from 'next/link';
 
 interface HeaderProps {
@@ -9,27 +11,28 @@ interface HeaderProps {
 export default function Header({ activeTab }: HeaderProps) {
 
   return (
-    <header  className="w-full h-15 bg-primary py-4 px-4 flex items-center justify-between border-b border-gray-800">
+    <header  className="w-full h-12 bg-primary py-4 px-4 flex items-center justify-between border-b border-gray-800">
       <div className="flex flex-col items-center">
-        <h1 className="text-lg font-semibold tracking-wider text-white">
+        <h1 className="text-xm font-semibold tracking-wider text-white">
           
           S W I P E V E R S E
         </h1>
         <span className="text-xs text-gray-400 ml-1 mt-auto"> UNBAISED DATING APP</span>
       </div>
 
-      <div className="flex items-center  gap-10">
+      <div className="flex items-center  gap-30">
         <Link href="/find" className={`flex flex-col items-center ${activeTab === 'find' ? 'text-white' : 'text-gray-400'}`}>
           <div className="flex flex-row gap-2">
-            <MessageSquare size={22} />
+            <TbHeartSearch  size={22} />
           <span className="text-xs mt-1 ">FIND LOVE</span>
           </div>
         </Link>
 
         <Link href="/likes" className={`flex flex-col items-center ${activeTab === 'likes' ? 'text-white' : 'text-gray-400'}`}>
           <div className="relative flex flex-row gap-2">
-            <Heart size={22} />
-            <span className="absolute -top-2 -left-0 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+            
+            <TbHearts size={22} />
+            <span className="absolute -top-2 -left-[-14px] bg-red-700 text-white text-[9px] rounded-full h-4 w-4 flex items-center justify-center">
               8
             </span>
          
@@ -39,8 +42,9 @@ export default function Header({ activeTab }: HeaderProps) {
 
         <Link href="/matches" className={`flex flex-col items-center ${activeTab === 'matches' ? 'text-white' : 'text-gray-400'}`}>
           <div className="relative flex flex-row gap-2">
-            <MessageSquare size={22} />
-            <span className="absolute -top-2 -left-0 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
+            <TbHeartCheck size={22} />
+
+            <span className="absolute -top-2 -left-[-12px] bg-red-700 text-white text-[9px] rounded-full h-4 w-4 flex items-center justify-center">
               1
             </span>
           
@@ -50,16 +54,15 @@ export default function Header({ activeTab }: HeaderProps) {
       </div>
 
       <div className='border-l border-gray-500  '>
-      <div className="flex flex-row ml-2   bg-gray-900 rounded-sm rounded-r-full ">
-        
+      <div className="flex flex-row ml-2    bg-black rounded-sm rounded-r-full ">
         <div className="text-left p-1 ml-2   ">
-          <div className="text-sm text-white font-medium">Vishal Kumar</div>
+          <div className="text-sm mr-2 text-white font-medium">Vishal Kumar</div>
           <div className="text-xs text-gray-400">0x10..12</div>
          </div>
 
         <div className='avatar avatar-placeholder'>
-          <div className='bg-warning text-neutral-content w-10 rounded-full'>
-            <span className='text-3xl '>VK</span>
+          <div className='bg-warning text-neutral-content h-10 w-10 rounded-full'>
+            <span className='text-sm '>VK</span>
           </div>
         </div>
        
