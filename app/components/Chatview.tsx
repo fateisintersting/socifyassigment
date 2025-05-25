@@ -48,9 +48,9 @@ const ChatView = ({ user, messages, onSendMessage }: ChatViewProps) => {
   return (
     <div className="h-full flex flex-col bg-chat-darker">
       {/* Chat Header */}
-      <div className="py-4 px-6 border-b border-gray-800 flex items-center">
+      <div className="py-1 px-1  bg-primary flex items-center">
         <div className='avatar'>
-                <div className='h-12 w-12 mr-4'>
+                <div className='h-8 w-8 mr-2'>
                     <img
                       alt="Tailwind CSS Navbar component"
                       src={user.avatar}
@@ -63,13 +63,13 @@ const ChatView = ({ user, messages, onSendMessage }: ChatViewProps) => {
       </div>
 
       {/* Chat Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div className="flex-1 shadow-2xl overflow-y-auto p-4  space-y-4">
         {messages.map((message) => (
           <div 
             key={message.id}
-            className={`flex ${message.sentByMe ? 'justify-end' : 'justify-start'}`}
+            className={`grid grid-cols-1  rounded-md p-1 shadow-amber-50 ${message.sentByMe ? 'justify-center bg-amber-50 ml-30  ' : 'justify-start bg-primary mr-30 '}`}
           >
-            <div className={message.sentByMe ? 'chat-bubble-sent' : 'chat-bubble-received'}>
+            <div className={` text-gray-600  ${message.sentByMe ? 'chat-bubble-sent' : 'chat-bubble-received'}`}>
               {message.text}
             </div>
           </div>
@@ -77,7 +77,7 @@ const ChatView = ({ user, messages, onSendMessage }: ChatViewProps) => {
       </div>
 
       {/* Message Input */}
-      <form onSubmit={handleSendMessage} className="p-4 border-t border-gray-800">
+      <form onSubmit={handleSendMessage} className="p-4">
         <div className="flex items-center bg-gray-800/50 rounded-full px-4 py-2">
           <GoSmiley size={20} className="text-gray-400 mr-3" />
           <input
