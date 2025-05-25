@@ -11,8 +11,8 @@ interface HeaderProps {
 export default function Header({ activeTab }: HeaderProps) {
 
   return (
-    <header  className="w-full h-12 bg-primary py-4 px-4 flex items-center justify-between border-b border-gray-800">
-      <div className="flex flex-col items-center">
+    <header  className="w-full h-12 bg-primary py-4 px-4 flex items-center justify-between border-b border-gray-800 ">
+      <div className="flex flex-col items-center ">
         <h1 className="text-xm font-semibold tracking-wider text-white">
           
           S W I P E V E R S E

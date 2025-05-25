@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { GoSmiley } from "react-icons/go";
 
@@ -35,7 +36,11 @@ const ChatView = ({ user, messages, onSendMessage }: ChatViewProps) => {
     return (
       <div className="h-full flex flex-col items-center justify-center bg-chat-darker text-center px-8">
         <div className="mb-6">
-          <img src="images/dating-app-concept-social-media.png" alt="Socify Logo" className="w-32 h-32" />
+          <Image
+          src="/images/dating-app-concept-social-media.png" alt="Socify Logo" 
+            width={128}
+            height={128}
+            />
         </div>
         <h2 className="text-2xl font-bold mb-2 tracking-wider">SWIPEVERSE</h2>
         <p className="text-gray-400 text-sm">
@@ -51,10 +56,12 @@ const ChatView = ({ user, messages, onSendMessage }: ChatViewProps) => {
       <div className="py-1 px-1  bg-primary flex items-center">
         <div className='avatar'>
                 <div className='h-8 w-8 mr-2'>
-                    <img
+                    <Image
                       alt="Tailwind CSS Navbar component"
                       src={user.avatar}
                       className="rounded-full"
+                      width={32}
+                      height={32}
                     />
                     </div>
 

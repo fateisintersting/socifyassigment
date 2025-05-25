@@ -1,15 +1,14 @@
 "use client";
 import React, { useState } from 'react';
-import ChatList from "./../components/Chatlist";
-import ChatView from "./../components/Chatview";
-import { mockUsers, mockMessages } from "./../data/mockData";
+import ChatList from "../components/Chatlist";
+import ChatView from "../components/Chatview";
+import { mockUsers, mockMessages } from "../data/mockData";
 import Header from '../components/Header';
 import { usePathname } from 'next/navigation';
 
-
-export default function page() {
-    const [activeUserId, setActiveUserId] = useState<string | undefined>(undefined);
-      const [messages, setMessages] = useState<{ [key: string]: any[] }>(mockMessages);
+const Page: React.FC = () =>{
+  const [activeUserId, setActiveUserId] = useState<string | undefined>(undefined);
+  const [messages, setMessages] = useState<{ [key: string]: any[] }>(mockMessages);
   const pathname = usePathname();
   const segments = pathname.split('/');
   const activeTab = (segments[2] || 'matches') as 'find' | 'likes' | 'matches';
@@ -39,7 +38,7 @@ export default function page() {
       const activeMessages = activeUserId ? messages[activeUserId] || [] : [];
     
   return (
-    <div  className="min-h-screen flex flex-col items-center justify-start " >
+    <div  className="min-h-screen flex flex-col items-center justify-start  " >
   {/* Header — now properly constrained to 60% */}
   <Header activeTab={activeTab} />
 
@@ -50,7 +49,7 @@ export default function page() {
           CHAT WITH PEOPLE WHO MATCHED WITH YOU
         </h2>
     </div>
-  <div className="grid grid-cols-2 justify-center overflow-hidden mt-4 p-1 ">
+  <div className="grid grid-cols-2 justify-center overflow-hidden mt-4 p-1  ">
     {/* Left panel */}
     <div className=" border-r border-gray-800 p-1">
       <ChatList 
@@ -75,3 +74,4 @@ export default function page() {
 
   );
 }
+export default Page;

@@ -1,4 +1,5 @@
 
+import Image from 'next/image';
 import React from 'react';
 
 interface ChatUser {
@@ -18,7 +19,7 @@ interface ChatListProps {
 
 const ChatList = ({ users, activeUserId, onSelectUser }: ChatListProps) => {
   return (
-    <div className="w-full h-full flex flex-col ">
+    <div className="w-full h-full flex flex-col  ">
       
       
       <div className="flex-1 overflow-y-auto p-2 ">
@@ -33,10 +34,12 @@ const ChatList = ({ users, activeUserId, onSelectUser }: ChatListProps) => {
             
             <div className='avatar'>
                 <div className='h-12 w-12 mr-4'>
-                    <img
+                    <Image
                       alt="Tailwind CSS Navbar component"
                       src={user.avatar}
                       className="rounded-full"
+                      width={12}
+                      height={12}
                     />
                     </div>
 
