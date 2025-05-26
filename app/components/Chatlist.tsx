@@ -19,10 +19,8 @@ interface ChatListProps {
 
 const ChatList = ({ users, activeUserId, onSelectUser }: ChatListProps) => {
   return (
-    <div className="w-full h-full flex flex-col  ">
-      
-      
-      <div className="flex-1 overflow-y-auto p-2 ">
+    <div className="w-full h-full flex flex-col   ">
+      <div className="flex-1 overflow-y-auto p-2 max-h-svw md:max-h-[500px] ">
         {users.map((user) => (
           <div 
             key={user.id}

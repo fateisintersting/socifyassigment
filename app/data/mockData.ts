@@ -36,7 +36,27 @@ export const mockUsers = [
     lastMessage: 'Cool! See you tomorrow',
     timestamp: '01 Sep 2024',
   },
-
+  {
+    id: '6',
+    name: 'Olivia Grace',
+    avatar: '/images/profile-6.png',
+    lastMessage: 'Hey! How are you?',
+    timestamp: '31 Aug 2024',
+  },
+  {
+    id: '7',
+    name: 'Ethan Carter',
+    avatar: '/images/profile-7.png',
+    lastMessage: 'Let’s meet up next week',
+    timestamp: '30 Aug 2024',
+  },
+  {
+    id: '8',
+    name: 'Ava Johnson',
+    avatar: '/images/profile-8.png',
+    lastMessage: 'Are we still on for tomorrow?',
+    timestamp: '29 Aug 2024',
+  },
   
 ];
 
@@ -140,5 +160,6 @@ export const mockMessages = {
       sentByMe: false,
       timestamp: '01 Sep 2024',
     },
+    
   ],
 };

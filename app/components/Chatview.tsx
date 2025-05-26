@@ -70,7 +70,7 @@ const ChatView = ({ user, messages, onSendMessage }: ChatViewProps) => {
       </div>
 
       {/* Chat Messages */}
-      <div className="flex-1 shadow-2xl overflow-y-auto p-4  space-y-4">
+      <div className="flex-1 shadow-2xl overflow-y-auto p-4 max-h-svw md:max-h-[500px] space-y-4">
         {messages.map((message) => (
           <div 
             key={message.id}
@@ -85,7 +85,7 @@ const ChatView = ({ user, messages, onSendMessage }: ChatViewProps) => {
 
       {/* Message Input */}
       <form onSubmit={handleSendMessage} className="p-4">
-        <div className="flex items-center bg-gray-800/50 rounded-full px-4 py-2">
+        <div className="flex  items-center bg-gray-800/50 rounded-full px-4 py-2">
           <GoSmiley size={20} className="text-gray-400 mr-3" />
           <input
             type="text"
